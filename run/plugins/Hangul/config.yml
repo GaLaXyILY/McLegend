@@ -1,0 +1,3 @@
+default: true
+separator: "'"
+double_consonant: false

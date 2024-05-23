@@ -49,6 +49,8 @@ run/*
 
 !run/world
 !run/world/**
+!run/field
+!run/field/**
 
 run/world/playerdata
 run/world/playerdata/**
@@ -56,11 +58,27 @@ run/world/playerdata/**
 run/**/build
 run/**/build/**
 
+run/**/user
+run/**/user/**
+
+run/**/backup
+run/**/backup/**
+
 run/**/cache
 run/**/cache/**
 
 run/**/data
 run/**/data/**
+
+run/**/advancements
+run/**/advancements/**
+
+run/**/stats
+run/**/stats/**
+
+
+run/**/*.db
+run/**/*.lock
 
 run/**/.*
 run/**/.*/**

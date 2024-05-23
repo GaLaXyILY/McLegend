@@ -112,10 +112,18 @@ tasks {
             "-XX:MaxTenuringThreshold=1",
             "-Dusing.aikars.flags=https://mcflags.emc.gs",
             "-Daikars.new.flags=true",
-            "-Dfile.encoding=UTF-8",
-            "-Xlog:gc*:logs/gc.log:time,uptime:filecount=5,filesize=1M",
+            "-Dfile.encoding=UTF-8"
         )
         downloadPlugins {
+            File(rootDir, "plugins").listFiles()?.forEach {
+                pluginJars(it)
+            }
+
+            url("https://github.com/ViaVersion/ViaBackwards/releases/download/4.10.2/ViaBackwards-4.10.2.jar")
+            url("https://github.com/ViaVersion/ViaVersion/releases/download/4.10.2/ViaVersion-4.10.2.jar")
+
+            url("https://github.com/Dev7ex/MultiWorld/releases/download/1.5.8-SNAPSHOT/MultiWorld-Bukkit-1.5.8-SNAPSHOT.jar")
+            url("https://github.com/Dev7ex/FacilisCommon/releases/download/1.0.5-SNAPSHOT/FacilisCommon-Bukkit-1.0.5-SNAPSHOT.jar")
             url("https://github.com/IntellectualSites/FastAsyncWorldEdit/releases/download/2.10.0/FastAsyncWorldEdit-Bukkit-2.10.0.jar")
 
             url("https://www.mythiccraft.io/downloads/mythicmobs/free/MythicMobs-5.6.2.jar")
