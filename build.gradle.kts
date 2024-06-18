@@ -143,10 +143,6 @@ tasks {
         nms.forEach {
             dependsOn(it.tasks.getByName("reobfJar"))
         }
-        destinationDirectory.set(file("$rootDir/target"))
-        archiveClassifier.set("")
-        archiveFileName.set("CustomFishing-" + project.name + "-" + project.version + ".jar")
-        }
         archiveClassifier = ""
         fun prefix(pattern: String) {
             relocate(pattern, "${project.group}.shaded.$pattern")
