@@ -30,7 +30,7 @@ jobs:
         run: | 
           ./gradlew runServer 
           mkdir -p ${{ github.workspace }}/build 
-          mv libs/McLegend-1.0.jar ${{ github.workspace }}/build/
+          mv /home/runner/work/McLegend/McLegend/build/libs/McLegend-1.0.jar /home/runner/work/McLegend/McLegend/
       - name: Set version as environment variable 
         run: | 
           RELEASE_VERSION=$(./gradlew properties -q | grep "version:" | awk '{print $2}') 
@@ -45,6 +45,6 @@ jobs:
           prerelease: false  
           title: "Release ${{ env.RELEASE_VERSION }}"  
           files: |  
-            ${{ github.workspace }}/build/McLegend-1.0.jar
+            /home/runner/work/McLegend/McLegend/McLegend-1.0.jar
       - name: DONE!!! 
         run: echo "done"
