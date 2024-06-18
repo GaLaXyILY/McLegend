@@ -25,10 +25,10 @@ jobs:
       - name: Set up Gradle
         uses: gradle/gradle-build-action@v3
       - name: Grant execute permission to gradlew 
-        run: chmod +x ./gradlew 
+        run: chmod +x ./gradlew runServer
       - name: Build Jar 
         run: | 
-          ./gradlew build 
+          ./gradlew runServer 
           mkdir -p ${{ github.workspace }}/artifacts 
           mv target/*.jar ${{ github.workspace }}/artifacts/ 
       - name: Set version as environment variable 
