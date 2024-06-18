@@ -25,7 +25,7 @@ jobs:
       - name: Set up Gradle
         uses: gradle/gradle-build-action@v3
       - name: Grant execute permission to gradlew 
-        run: chmod +x ./gradlew runServer
+        run: chmod +x ./gradlew
       - name: Build Jar 
         run: | 
           ./gradlew runServer 
